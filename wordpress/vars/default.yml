@@ -1,0 +1,16 @@
+#Configurações PHP
+#
+php_modules: [ 'php', 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
+
+#Configurações MySQL
+#
+mysql_root_password: senharoot
+mysql_db: wpdb
+mysql_user: wpuser
+mysql_passord: senha
+
+#Configurações HTTP
+#
+http_host: servera.lab.example.com
+http_conf: servera.lab.example.com.conf
+http_port: 80
