@@ -1,4 +1,4 @@
-- name: Install HTTP Packages
+- name: Instalando Apache
   dnf: 
     name: httpd 
     state: latest
@@ -23,4 +23,4 @@
     dest: "/etc/httpd/conf.d/{{ http_conf }}"
     owner: root
     group: root
-    mode: u=rw,g=r,o=r
+    mode: '0644'
