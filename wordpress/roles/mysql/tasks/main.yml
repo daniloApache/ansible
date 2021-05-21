@@ -1,28 +1,35 @@
 # MySQL Configuration
-    - name: Install MySQL Packages
-      yum: name={{ item }} update_cache=yes state=latest
-      loop: [ 'mysql-server', 'php-mysqlnd', 'python3-PyMySQL' ]
+    - name: Instalando pacotes MySQL
+      yum: 
+        name:
+          - mysql-server
+          - php-mysqlnd
+          - python3-PyMySQL
+        state: latest
  
-    - name: Start mysqld service
-      systemd: name=mysqld state=started enabled=yes
+    - name: Startando o serviço
+      systemd: 
+        name: mysqld
+        state: started 
+        enabled: yes
  
-    - name: Set MySQL root Password
+    - name: Setar senha Root MySQL
       mysql_user:
         login_host: 'localhost'
         login_user: 'root'
-        login_password: ''
+        login_password: 'senha'
         name: 'root'
         password: '{{ mysql_root_password }}'
         state: present
  
-    - name: Creates database for WordPress
+    - name: Criando DB para o MySQL
       mysql_db:
         name: "{{ mysql_db }}"
         state: present
         login_user: root
         login_password: "{{ mysql_root_password }}"
  
-    - name: Create MySQL user for WordPress
+    - name: Criando usuário MySQL para o WordPress
       mysql_user:
         name: "{{ mysql_user }}"
         password: "{{ mysql_password }}"
