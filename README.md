@@ -40,6 +40,7 @@ $ ansible --version
 </h2>
 
 $ ssh-keygen
+
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa): <enter>
 Enter passphrase (empty for no passphrase): <enter>
