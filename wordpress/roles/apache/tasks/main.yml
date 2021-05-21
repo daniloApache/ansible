@@ -3,7 +3,7 @@
     name: httpd 
     state: latest
  
-- name: Start httpd service
+- name: Startando o serviço
   systemd: 
     name: httpd 
     state: started 
