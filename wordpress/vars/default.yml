@@ -1,13 +1,10 @@
-#PHP Settings
-php_modules: [ 'php', 'php-curl', 'php-gd', 'php-mbstring', 'php-xml', 'php-xmlrpc', 'php-soap', 'php-intl', 'php-zip' ]
- 
 #MySQL Settings
-mysql_root_password: "your-root-password"
-mysql_db: "wpdb"
-mysql_user: "wpuser"
-mysql_password: "password"
+mysql_root_password: "setar-senha-root-mysql"
+mysql_db: "nome-do-banco"
+mysql_user: "usuario"
+mysql_password: "senha-usuario"
  
 #HTTP Settings
 http_host: "wp.example.com" #validar server
 http_conf: "wp.example.com.conf" #validar server
-http_port: "80"
+http_port: "80" #Validar porta 443 (https)
