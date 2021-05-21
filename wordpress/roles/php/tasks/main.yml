@@ -1,10 +1,26 @@
-- name: Install PHP Remi Repository
-  yum: name=http://rpms.remirepo.net/enterprise/remi-release-8.rpm update_cache=yes state=latest
+- name: Instalando o repositório REMI
+  dnf: 
+    name: 'http://rpms.remirepo.net/enterprise/remi-release-8.rpm' 
+    state: present
  
-- name: Enable PHP Remi Repository
+- name: EHabilitando repositório
   command: dnf module reset php -y
   command: dnf module enable php:remi-7.4 -y
  
-- name: Install PHP Extensions
-  yum: name={{ item }} update_cache=yes state=latest
-  loop: "{{ php_modules }}"
+- name: Instalar módulos PHP
+  dnf: 
+    name:
+      - php
+      - php-cli
+      - php-common
+      - php-curl
+      - php-gd
+      - php-mbstring
+      - php-xml
+      - php-xmlrpc
+      - php-soap
+      - php-intl 
+      - php-zip 
+      - php-fpm
+    state: latest
+  
