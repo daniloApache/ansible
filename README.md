@@ -41,11 +41,6 @@ $ ansible --version
 
 $ ssh-keygen
 
-Generating public/private rsa key pair.
-Enter file in which to save the key (/root/.ssh/id_rsa): <enter>
-Enter passphrase (empty for no passphrase): <enter>
-Enter same passphrase again: <enter>
-
 $ ssh-copy-id -i /root/.ssh/id_rsa.pub <usuário_node_destino>@<ip_ou_host_node_destino>
 
 Realize o teste de acesso SSH.
